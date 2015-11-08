@@ -9,6 +9,7 @@ This document is about using [GNU Radio](#using-a-raspberry-pi-as-remote-softwar
 * [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
   * [NFM modulator example for GNU Radio](#nfm-modulator-example-for-gnu-radio)
   * [SSB modulator example for GNU Radio](#ssb-modulator-example-for-gnu-radio)
+  * [AM modulator example for GNU Radio](#am-modulator-example-for-gnu-radio)
 * [Using rpitx with csdr to modulate streaming input](#using-rpitx-with-csdr-to-modulate-streaming-input)
   * [Modulate from raw audio file](#modulate-from-raw-audio-file)
   * [Modulate from microphone input source](#modulate-from-microphone-input-source)
@@ -80,6 +81,21 @@ If you want **LSB**, you should double-click the "Band Pass Filter" block, and c
 * *High Cutoff Freq* to -300
 
 ![SSB in GQRX](/images/grc-ssb-bpf.png?raw=true)
+
+### AM modulator example for GNU Radio
+
+Use the flow graph in `gnuradio/am-rpitx`.
+This will transmit an **AM** signal. 
+
+![AM in GQRX](/images/grc-am.png?raw=true)
+
+The spectrum of the transmitted I/Q signal looks like this:
+
+![AM in GQRX](/images/gqrx-am-running.png?raw=true)
+
+After receiving it with RTL-SDR and GQRX:
+
+![AM in GQRX](/images/gqrx-am.png?raw=true)
 
 ## Using rpitx with csdr to modulate streaming input
 
