@@ -6,7 +6,7 @@ This document is about using [GNU Radio](#using-a-raspberry-pi-as-remote-softwar
 
 **Table of contents**
 
-* [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
+* [Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
   * [NFM modulator example for GNU Radio](#nfm-modulator-example-for-gnu-radio)
   * [SSB modulator example for GNU Radio](#ssb-modulator-example-for-gnu-radio)
   * [AM modulator example for GNU Radio](#am-modulator-example-for-gnu-radio)
