@@ -16,7 +16,7 @@ On the Raspberry Pi, execute:
 * This will listen on TCP port 8011 for the I/Q signal.
 * The center frequency of the transmitter will be 28400 kHz.
 
-## NFM modulator example in GNU Radio
+**NFM modulator example in GNU Radio**
 
 On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gnuradio/nfm-rpitx`.
 
