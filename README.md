@@ -89,3 +89,13 @@ Then, on the remote computer, execute:
     arecord -fS16_LE -r48000 -c1 - | nc raspberrypi.local 8011
 
 You should replace `raspberrypi.local` with the IP address of the Raspberry Pi (unless avahi config is the default).
+
+**Using ADPCM codec to decrease network usage while streaming:**
+
+Let's see an example for this on the NFM modulator. Execute on the Raspberry Pi:
+
+    nc -l 8011 | csdr decode_ima_adpcm_u8_i16 | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+
+On the PC, execute this:
+
+    arecord -fS16_LE -r48000 -c1 - | csdr encode_ima_adpcm_i16_u8 | nc raspberrypi.local 8011
