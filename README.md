@@ -41,6 +41,7 @@ We will play these files in a loop, you can stop it with Ctrl+C.
   * `csdr bandpass_fir_fft_cc -0.1 0` is the lower sideband
   * `csdr bandpass_fir_fft_cc 0 0.1` is the upper sideband
 * I have experienced that if the SSB signal is in the center of the I/Q signal, then it is not transmitted correctly. The solution was to shift it. So the exact frequency should be around: `rpitx frequency + 48000*0.2 = rpitx frequency + 9600 Hz`
+* If you want to get some compression on the speech, you can try `csdr fastagc_ff` instead of `csdr gain_ff 2.0`.
 
 **Generate NFM modulation:**
 
