@@ -47,6 +47,10 @@ On the Raspberry Pi, execute:
 * This will listen on TCP port 8011 for the I/Q signal.
 * The center frequency of the transmitter will be 28400 kHz.
 
+If you want it to restart everytime the connection is lost, use this command:
+
+    while true; do (nc -l 8011; dd if=/dev/zero bs=4096 count=30); done | sudo rpitx -i- -m IQFLOAT -f 28400
+
 ### NFM modulator example for GNU Radio
 
 On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gnuradio/nfm-rpitx`.
@@ -86,6 +90,8 @@ If you want **LSB**, you should double-click the "Band Pass Filter" block, and c
 
 Use the flow graph in `gnuradio/am-rpitx`.
 This will transmit an **AM** signal. 
+
+* One thing that can be screwed up is **gain**. You have to set the gain of the input signal correctly, everywhere! I had to play with the AGC to get it correctly.
 
 ![AM in GQRX](/images/grc-am.png?raw=true)
 
