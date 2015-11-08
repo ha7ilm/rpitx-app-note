@@ -1,5 +1,9 @@
 # Application note on using rpitx
 
+## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
+
+(TODO)
+
 ## Using with csdr to modulate streaming input
 
 You will need the *dev* branch of *csdr* for doing this.<br />
@@ -18,7 +22,7 @@ Note that it should be already done if you installed *qtcsdr* previously.
 These examples will use the raw audio file `music48000.raw` and `speech48000.raw`, which is present in this repo. You can get this file by:
 
     git clone https://github.com/ha7ilm/rpitx-app-note
-    cd rpitx-app-note; ls  #There is your file.
+    cd rpitx-app-note; ls  #There are your files.
 
 We will play these files in a loop, you can stop it with Ctrl+C.
 
