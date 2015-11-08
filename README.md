@@ -75,7 +75,7 @@ After receiving it with RTL-SDR and GQRX:
 
 ![SSB in GQRX](/images/gqrx-ssb.png?raw=true)
 
-If you want **LSB*, you should double-click the "Band Pass Filter" block, and change:
+If you want **LSB**, you should double-click the "Band Pass Filter" block, and change:
 * *Low Cutoff Freq* to -3000
 * *High Cutoff Freq* to -300
 
