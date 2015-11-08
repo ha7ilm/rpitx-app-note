@@ -11,7 +11,7 @@ Setup instructions:
    	git checkout dev
    	make && sudo make install 
 
-Note that it should be already done, if you installed *qtcsdr*.
+Note that it should be already done if you installed *qtcsdr* previously.
 
 ### Modulate from raw audio file
 
