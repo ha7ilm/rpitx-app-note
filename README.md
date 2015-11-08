@@ -2,7 +2,7 @@
 
 The recently released <a href="https://github.com/F5OEO/rpitx">rpitx</a> by Evariste, F5OEO allows us to transmit an RF signal over GPIO18 (pin 12) of a Raspberry Pi. The software can accept an I/Q signal as an input, so now a Pi can be used as a general purpose SDR transmitter.
 
-This document is about using <a href="http://gnuradio.org/">GNU Radio</a> and <a href="https://github.com/simonyiszk/csdr">csdr</a> with *rpitx*.
+This document is about using [GNU Radio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio) and [csdr](#using-rpitx-with-csdr-to-modulate-streaming-input) with *rpitx*.
 
 **Table of contents**
 
