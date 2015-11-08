@@ -79,7 +79,7 @@ If you want **LSB*, you should double-click the "Band Pass Filter" block, and ch
 * *Low Cutoff Freq* to -3000
 * *High Cutoff Freq* to -300
 
-![SSB in GQRX](/images/gqrx-ssb-bpf.png?raw=true)
+![SSB in GQRX](/images/grc-ssb-bpf.png?raw=true)
 
 ## Using rpitx with csdr to modulate streaming input
 
