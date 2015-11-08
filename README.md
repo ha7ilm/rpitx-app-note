@@ -7,7 +7,8 @@ This document is about using [GNU Radio](#using-a-raspberry-pi-as-remote-softwar
 **Table of contents**
 
 * [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
-  * [NFM modulator example in GNU Radio](#nfm-modulator-example-in-gnu-radio)
+  * [NFM modulator example for GNU Radio](#nfm-modulator-example-for-gnu-radio)
+  * [SSB modulator example for GNU Radio](#ssb-modulator-example-for-gnu-radio)
 * [Using rpitx with csdr to modulate streaming input](#using-rpitx-with-csdr-to-modulate-streaming-input)
   * [Modulate from raw audio file](#modulate-from-raw-audio-file)
   * [Modulate from microphone input source](#modulate-from-microphone-input-source)
@@ -45,7 +46,7 @@ On the Raspberry Pi, execute:
 * This will listen on TCP port 8011 for the I/Q signal.
 * The center frequency of the transmitter will be 28400 kHz.
 
-### NFM modulator example in GNU Radio
+### NFM modulator example for GNU Radio
 
 On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gnuradio/nfm-rpitx`.
 
@@ -59,7 +60,7 @@ Here is the good result if received with an RTL-SDR and GQRX:
 
 ![NFM in GQRX](/images/gqrx-nfm.png?raw=true)
 
-### SSB modulator example in GNU Radio
+### SSB modulator example for GNU Radio
 
 Use the flow graph in `gnuradio/ssb-rpitx`.
 This will transmit an USB signal. 
