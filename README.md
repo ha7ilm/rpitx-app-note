@@ -91,7 +91,7 @@ This will transmit an **AM** signal.
 
 The spectrum of the transmitted I/Q signal looks like this:
 
-![AM in GQRX](/images/gqrx-am-running.png?raw=true)
+![AM in GQRX](/images/grc-am-running.png?raw=true)
 
 After receiving it with RTL-SDR and GQRX:
 
