@@ -2,9 +2,37 @@
 
 ## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
 
-(TODO)
+To do this, you will need:
+* a PC running GNU Radio on Linux,
+* a Raspberry Pi with *rpitx* installed,
+* both connected to the same network.
+
+We will stream the I/Q signal from the PC to the Raspberry Pi via TCP.
+
+On the Raspberry Pi, execute:
+
+    nc -l 8011 | sudo rpitx -i- -m IQFLOAT -f 28400
+
+* This will listen on TCP port 8011 for the I/Q signal.
+* The center frequency of the transmitter will be 28400 kHz.
+
+On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gnuradio/nfm-rpitx`.
+
+![NFM in GNU Radio](/images/grc-nfm.png?raw=true)
+
+If you execute it, the I/Q signal will be streamed to the Raspberry Pi through the TCP socket.
+
+* Note that the frequency translation is there on intention. On some unkown reason, the spectrum is quite bad if our signal is centered at DC.
+
+Here is the good result if received with an RTL-SDR and GQRX:
+
+![NFM in GQRX](/images/gqrx-nfm.png?raw=true)
+
+
 
 ## Using with csdr to modulate streaming input
+
+<a href="https://github.com/simonyiszk/csdr">csdr</a> is a command line tool for simple DSP tasks. It can be used to build simple AM/FM/SSB receivers, and now transmitters as well, and is quite fast to setup.
 
 You will need the *dev* branch of *csdr* for doing this.<br />
 Setup instructions:
