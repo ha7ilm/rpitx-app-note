@@ -63,7 +63,7 @@ Here is the good result if received with an RTL-SDR and GQRX:
 ### SSB modulator example for GNU Radio
 
 Use the flow graph in `gnuradio/ssb-rpitx`.
-This will transmit an USB signal. 
+This will transmit an **USB** signal. 
 
 ![SSB in GNU Radio](/images/grc-ssb.png?raw=true)
 
@@ -74,6 +74,12 @@ The spectrum of the transmitted I/Q signal looks like this:
 After receiving it with RTL-SDR and GQRX:
 
 ![SSB in GQRX](/images/gqrx-ssb.png?raw=true)
+
+If you want **LSB*, you should double-click the "Band Pass Filter" block, and change:
+* *Low Cutoff Freq* to -3000
+* *High Cutoff Freq* to -300
+
+![SSB in GQRX](/images/gqrx-ssb-bpf.png?raw=true)
 
 ## Using rpitx with csdr to modulate streaming input
 
