@@ -5,8 +5,9 @@
 * [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
 * [Using rpitx with csdr to modulate streaming input](#using-rpitx-with-csdr-to-modulate-streaming-input)
 
-
+<br /><br />
 ![Warning](/images/lpf-warning.png?raw=true)
+<br /><br /><br />
 
 ## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
 
