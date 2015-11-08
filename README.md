@@ -3,7 +3,12 @@
 **Table of contents**
 
 * [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
+  * [NFM modulator example in GNU Radio](#nfm-modulator-example-in-gnu-radio)
 * [Using rpitx with csdr to modulate streaming input](#using-rpitx-with-csdr-to-modulate-streaming-input)
+  * [Modulate from raw audio file](#modulate-from-raw-audio-file)
+  * [Modulate from microphone input source](#modulate-from-microphone-input-source)
+  * [Modulate from audio streamed from remote computer](#modulate-from-audio-streamed-from-remote-computer)
+  * [Using ADPCM codec to decrease network usage while streaming](#using-adpcm-codec-to-decrease-network-usage-while-streaming)
 
 <br /><br />
 ![Warning](/images/lpf-warning.png?raw=true)
@@ -25,7 +30,7 @@ On the Raspberry Pi, execute:
 * This will listen on TCP port 8011 for the I/Q signal.
 * The center frequency of the transmitter will be 28400 kHz.
 
-**NFM modulator example in GNU Radio**
+### NFM modulator example in GNU Radio
 
 On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gnuradio/nfm-rpitx`.
 
@@ -111,7 +116,7 @@ You will have to get the correct ALSA device ID via `arecord -L`, it will be som
     #WFM:
     arecord -c1 -r48000 -D plughw:CARD=Device,DEV=0 -fS16_LE - | csdr convert_i16_f | csdr gain_ff 70000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
 
-### Modulate audio streamed from remote computer
+### Modulate from audio streamed from remote computer
 
 First, start the transmitter:
 
@@ -134,7 +139,7 @@ Then, on the remote computer, execute:
 
 You should replace `raspberrypi.local` with the IP address of the Raspberry Pi (unless avahi config is the default).
 
-### Using ADPCM codec to decrease network usage while streaming:**
+### Using ADPCM codec to decrease network usage while streaming
 
 Let's see an example for this on the NFM modulator. Execute on the Raspberry Pi:
 
