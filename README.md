@@ -91,7 +91,7 @@ If you want **LSB**, you should double-click the "Band Pass Filter" block, and c
 Use the flow graph in `gnuradio/am-rpitx`.
 This will transmit an **AM** signal. 
 
-* One thing that can be screwed up is **gain**. You have to set the gain of the input signal correctly, everywhere! I had to play with the AGC to get it correctly.
+* One thing that can be screwed up is **gain**. I had to play with the AGC to get it right.
 
 ![AM in GQRX](/images/grc-am.png?raw=true)
 
