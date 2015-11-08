@@ -1,5 +1,13 @@
 # Application note on using rpitx
 
+**Table of contents**
+
+* [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
+* [Using rpitx with csdr to modulate streaming input](#using-rpitx-with-csdr-to-modulate-streaming-input)
+
+
+![Warning](/images/lpf-warning.png?raw=true)
+
 ## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
 
 To do this, you will need:
@@ -32,7 +40,7 @@ Here is the good result if received with an RTL-SDR and GQRX:
 
 
 
-## Using with csdr to modulate streaming input
+## Using rpitx with csdr to modulate streaming input
 
 <a href="https://github.com/simonyiszk/csdr">csdr</a> is a command line tool for simple DSP tasks. It can be used to build simple AM/FM/SSB receivers, and now transmitters as well, and is quite fast to setup.
 
@@ -102,7 +110,7 @@ You will have to get the correct ALSA device ID via `arecord -L`, it will be som
     #WFM:
     arecord -c1 -r48000 -D plughw:CARD=Device,DEV=0 -fS16_LE - | csdr convert_i16_f | csdr gain_ff 70000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
 
-### Stream audio from remote computer
+### Modulate audio streamed from remote computer
 
 First, start the transmitter:
 
@@ -125,7 +133,7 @@ Then, on the remote computer, execute:
 
 You should replace `raspberrypi.local` with the IP address of the Raspberry Pi (unless avahi config is the default).
 
-**Using ADPCM codec to decrease network usage while streaming:**
+### Using ADPCM codec to decrease network usage while streaming:**
 
 Let's see an example for this on the NFM modulator. Execute on the Raspberry Pi:
 
