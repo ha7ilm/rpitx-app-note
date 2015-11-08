@@ -53,13 +53,26 @@ On the PC, open GNU Radio Companion, and load the flow graph in this repo at `gn
 
 If you execute it, the I/Q signal will be streamed to the Raspberry Pi through the TCP socket.
 
-* Note that the frequency translation is there on intention. On some unkown reason, the spectrum is quite bad if our signal is centered at DC.
+* Note that the frequency translation is there on intention. On some unkown reason, the spectrum is quite distorted if our signal is centered at DC.
 
 Here is the good result if received with an RTL-SDR and GQRX:
 
 ![NFM in GQRX](/images/gqrx-nfm.png?raw=true)
 
+### SSB modulator example in GNU Radio
 
+Use the flow graph in `gnuradio/ssb-rpitx`.
+This will transmit an USB signal. 
+
+![SSB in GNU Radio](/images/grc-ssb.png?raw=true)
+
+The spectrum of the transmitted I/Q signal looks like this:
+
+![SSB in GNU Radio](/images/grc-ssb-running.png?raw=true)
+
+After receiving it with RTL-SDR and GQRX:
+
+![SSB in GQRX](/images/gqrx-ssb.png?raw=true)
 
 ## Using rpitx with csdr to modulate streaming input
 
