@@ -1,5 +1,9 @@
 # Application note on using rpitx
 
+The recently released <a href="https://github.com/F5OEO/rpitx">rpitx</a> by Evariste, F5OEO allows us to transmit an RF signal over GPIO18 (pin 12) of a Raspberry Pi. The software can accept an I/Q signal as an input, so now a Pi can be used as a general purpose SDR transmitter.
+
+This document is about using <a href="http://gnuradio.org/">GNU Radio</a> and <a href="https://github.com/simonyiszk/csdr">csdr</a> with *rpitx*.
+
 **Table of contents**
 
 * [Using a Raspberry Pi as remote software defined radio peripheral from GNU adio](#using-a-raspberry-pi-as-remote-software-defined-radio-peripheral-from-gnu-radio)
@@ -12,7 +16,17 @@
 
 <br /><br />
 ![Warning](/images/lpf-warning.png?raw=true)
-<br /><br /><br />
+<br /><br />
+The output of the Raspberry Pi GPIO 18 is a square wave, which contains harmonics.<br />
+For example, if you transmit on 28 MHz, you will also transmit on:
+
+* 28 × 3 = 84 MHz
+* 28 × 5 = 140 MHz
+* 28 × 7 = 196 MHz<br/>...
+
+...and actually you may distrub some important radio communication services. Please don't do this! You can get into trouble! You have been warned.
+
+If you ever want to connect this to a real antenna, you should use a low-pass filter, like the <a href="http://rfsparkling.com/qrpi">QRPi board</a>. In addition, only transmit if you have a proper license to do so.
 
 ## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
 
