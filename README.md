@@ -26,7 +26,8 @@ For example, if you transmit on 28 MHz, you will also transmit on:
 
 ...and actually you may distrub some important radio communication services. Please don't do this! You can get into trouble! You have been warned.
 
-If you ever want to connect this to a real antenna, you should use a low-pass filter, like the <a href="http://rfsparkling.com/qrpi">QRPi board</a>. In addition, only transmit if you have a proper license to do so.
+If you want to connect this to a real antenna, you should use a low-pass filter, like the <a href="http://rfsparkling.com/qrpi">QRPi board</a>.<br />
+In addition, only transmit if you have a proper license to do so.
 
 ## Using a Raspberry Pi as remote software defined radio peripheral from GNU Radio
 
