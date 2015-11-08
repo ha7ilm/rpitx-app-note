@@ -66,3 +66,26 @@ You will have to get the correct ALSA device ID via `arecord -L`, it will be som
     arecord -c1 -r48000 -D plughw:CARD=Device,DEV=0 -fS16_LE - | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
     #WFM:
     arecord -c1 -r48000 -D plughw:CARD=Device,DEV=0 -fS16_LE - | csdr convert_i16_f | csdr gain_ff 70000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+
+### Stream audio from remote computer
+
+First, start the transmitter:
+
+    #AM:
+    nc -l 8011 | csdr convert_i16_f | csdr gain_ff 1.0 | csdr dsb_fc | csdr add_dcoffset_cc | sudo rpitx -i- -m IQFLOAT -f 28400
+    #USB:
+    nc -l 8011 | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc 0 0.1 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
+    #LSB:
+    nc -l 8011 | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc -0.1 0 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
+    #NFM:
+    nc -l 8011 | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+    #WFM:
+    nc -l 8011 | csdr convert_i16_f | csdr gain_ff 70000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+
+The Raspberry Pi will listen on TCP port 8011, and wait for connection.
+
+Then, on the remote computer, execute:
+
+    arecord -fS16_LE -r48000 -c1 - | nc raspberrypi.local 8011
+
+You should replace `raspberrypi.local` with the IP address of the Raspberry Pi (unless avahi config is the default).
