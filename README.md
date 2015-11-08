@@ -20,22 +20,22 @@ These examples will use the raw audio file `music48000.raw` and `speech48000.raw
     git clone https://github.com/ha7ilm/rpitx-app-note
     cd rpitx-app-note; ls  #There is your file.
 
-A raw audio file differs from a .wav file because it doesn't have any headers to store its parameters, just the samples after each other.
+We will play these files in a loop, you can stop it with Ctrl+C.
 
 **Generate AM modulation:**
 
-    cat music48000.raw | csdr convert_i16_f | csdr gain_ff 1.0 | csdr dsb_fc | csdr add_dcoffset_cc | sudo rpitx -i- -m IQFLOAT -f 28400
+    (while true; do cat music48000.raw; done) | csdr convert_i16_f | csdr gain_ff 1.0 | csdr dsb_fc | csdr add_dcoffset_cc | sudo rpitx -i- -m IQFLOAT -f 28400
 
 * The part `csdr gain_ff 1.0` can be changed to increase/decrease modulation.
 * The `-f 28400` at the end gives the transmit frequency in kHz.
 
 **Generate USB modulation:**
 
-    cat speech48000.raw | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc 0 0.1 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
+    (while true; do cat speech48000.raw; done) | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc 0 0.1 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
 
 **Generate LSB modulation:**
 
-    cat speech48000.raw | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc -0.1 0 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
+    (while true; do cat speech48000.raw; done) | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc -0.1 0 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
 
 * It's the matter of the filter which sideband do we select: 
   * `csdr bandpass_fir_fft_cc -0.1 0` is the lower sideband
@@ -44,5 +44,10 @@ A raw audio file differs from a .wav file because it doesn't have any headers to
 
 **Generate NFM modulation:**
 
-    cat music48000.raw | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+    (while true; do cat music48000.raw; done) | csdr convert_i16_f | csdr gain_ff 7000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
 
+**Generate WFM modulation:**
+
+    (while true; do cat music48000.raw; done) | csdr convert_i16_f | csdr gain_ff 70000 | csdr convert_f_samplerf 20833 | sudo rpitx -i- -m RF -f 28400
+
+* Frequency deviation is set much higher with `csdr gain_ff 70000`, that's the only difference between this and NFM.
