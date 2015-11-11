@@ -17,7 +17,7 @@ This document is about using [GNU Radio](#using-a-raspberry-pi-as-remote-softwar
   * [Using ADPCM codec to decrease network usage while streaming](#using-adpcm-codec-to-decrease-network-usage-while-streaming)
 
 <br /><br />
-![Warning](/images/lpf-warning.png?raw=true)
+![Warning](/images/bpf-warning.png?raw=true)
 <br /><br />
 The output of the Raspberry Pi GPIO 18 is a square wave, which contains harmonics.<br />
 For example, if you transmit on 28 MHz, you will also transmit on:
