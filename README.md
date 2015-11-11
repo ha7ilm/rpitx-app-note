@@ -28,7 +28,7 @@ For example, if you transmit on 28 MHz, you will also transmit on:
 
 ...and actually you may distrub some important radio communication services. Please don't do this! You can get into trouble! You have been warned.
 
-Right now it is more useful to use this for e.g. demonstrations on SDR transmitters.<br />
+In addition to the squre wave output, the spectrum is also affected by the PWM-based amplitude modulation implemented in *rpitx*. Right now it is more useful to use this for e.g. demonstrations on SDR transmitters.<br />
 If you want to connect this to a real antenna, you should use a **very good band-pass filter**!<br />
 In addition, only transmit if you have a proper license to do so.<br />
 Please check your signal output on a proper spectrum analyzer before ever using this on the air!
