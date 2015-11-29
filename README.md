@@ -209,3 +209,23 @@ Let's see an example for this on the NFM modulator. Execute on the Raspberry Pi:
 On the PC, execute this:
 
     arecord -fS16_LE -r48000 -c1 - | csdr encode_ima_adpcm_i16_u8 | nc raspberrypi.local 8011
+
+### Transmitting amateur radio digital modes from remote computer
+
+On the Raspberry Pi, run:
+
+    nc -l 8011 | csdr convert_i16_f | csdr dsb_fc | csdr bandpass_fir_fft_cc 0 0.1 0.01 | csdr gain_ff 2.0 | csdr shift_addition_cc 0.2 | sudo rpitx -i- -m IQFLOAT -f 28400
+
+On your PC, run:
+
+    arecord -fS16_LE -r48000 -c1 - | nc raspberrypi.local 8011
+
+Run fldigi, and start to transmit:
+
+![fldigi](/images/fldigi.png?raw=true)
+
+If you have Ubuntu, you are likely to have PulseAudio.
+
+Run `pavucontrol` and set the source of `arecord` to "Monitor of" your speakers output.
+
+![pavucontrol](/images/pavucontrol.png?raw=true)
