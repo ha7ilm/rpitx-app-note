@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="544.27668"
-     inkscape:cy="1008.1931"
+     inkscape:zoom="0.7"
+     inkscape:cx="796.21076"
+     inkscape:cy="1207.5944"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -69,16 +69,16 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3755"
        style="font-size:40px;font-style:italic;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
        transform="translate(-212.82268,-18.163162)"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744"><flowRegion
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245"><flowRegion
          id="flowRegion3757"><rect
            id="rect3759"
            width="485.71429"
@@ -92,8 +92,8 @@
        style="font-size:40px;font-style:italic;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
        transform="matrix(2.628935,0,0,2.628935,-1326.2681,-131.50023)"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744"><flowRegion
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245"><flowRegion
          id="flowRegion3757-8"><rect
            id="rect3759-9"
            width="485.71429"
@@ -107,8 +107,8 @@
        style="font-size:40px;font-style:italic;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
        transform="translate(-112.22313,32.374383)"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744"><flowRegion
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245"><flowRegion
          id="flowRegion3757-3"><rect
            id="rect3759-6"
            width="620.06458"
@@ -122,8 +122,8 @@
        style="font-size:40px;font-style:italic;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
        transform="translate(-129.32784,81.86445)"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744"><flowRegion
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245"><flowRegion
          id="flowRegion3757-3-0"><rect
            id="rect3759-6-6"
            width="639.76257"
@@ -133,57 +133,57 @@
          id="flowPara3761-8-7"
          style="font-style:normal;font-weight:normal;-inkscape-font-specification:Sans">without a band-pass filter!</flowPara></flowRoot>    <path
        style="fill:#ffcc00;stroke:#000000;stroke-width:9.6725378;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 805.17678,217.28829 154.16252,0 -76.98796,-134.321147 z"
+       d="m 805.17678,217.64543 154.16252,0 -76.98796,-134.321144 z"
        id="path2985-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5.0353241;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 841.67635,159.6381 8.27231,0 c 0,0 3.9235,-12.92725 8.09249,-12.94797 4.16899,-0.0208 7.89662,12.3354 7.89662,12.3354 l 0.50285,-0.0233 c 0,0 3.0665,-12.647 8.14516,-12.492 5.07867,0.15499 7.25689,14.65374 7.25689,14.65374 0,0 3.51856,-14.91846 8.74824,-14.83358 5.2297,0.085 8.09249,13.12782 8.09249,13.12782 l 24.81695,0.17982"
+       d="m 841.67635,159.99524 8.27231,0 c 0,0 3.9235,-12.92725 8.09249,-12.94797 4.16899,-0.0208 7.89662,12.3354 7.89662,12.3354 l 0.50285,-0.0233 c 0,0 3.0665,-12.647 8.14516,-12.492 5.07867,0.15499 7.25689,14.65374 7.25689,14.65374 0,0 3.51856,-14.91846 8.74824,-14.83358 5.2297,0.085 8.09249,13.12782 8.09249,13.12782 l 24.81695,0.17982"
        id="path3876"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cczcczczcc"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5.0353241;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 908.86196,159.32199 0,21.49285"
+       d="m 908.86196,159.67913 0,21.49285"
        id="path3878"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <path
        style="fill:none;stroke:#000000;stroke-width:5.0353241;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 909.04179,213.94768 0,-22.65896"
+       d="m 909.04179,214.30482 0,-22.65896"
        id="path3880"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <rect
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:13.39999962;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3882-5"
        width="28.413614"
        height="5.5382471"
        x="894.29547"
-       y="189.79611"
+       y="190.15326"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
     <rect
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:13.39999962;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3882-5-0"
        width="28.413614"
        height="5.5382471"
        x="894.18762"
-       y="178.44896"
+       y="178.80611"
        inkscape:export-filename="/home/pcfl/temprect.png"
-       inkscape:export-xdpi="79.604744"
-       inkscape:export-ydpi="79.604744" />
+       inkscape:export-xdpi="117.6245"
+       inkscape:export-ydpi="117.6245" />
   </g>
 </svg>
