@@ -222,7 +222,7 @@ On your PC, run:
 
 If you have Ubuntu on your PC, you are likely to have PulseAudio.
 
-Run `pavucontrol` and set the source of `arecord` to "Monitor of" your speakers output.
+Run `pavucontrol` and set the recording source of `arecord` to "Monitor of" your speakers output.
 
 ![pavucontrol](/images/pavucontrol.png?raw=true)
 
