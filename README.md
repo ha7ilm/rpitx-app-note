@@ -234,6 +234,6 @@ If you don't want to listen to the transmitted signal on your PC:
 
     sudo modprobe snd-aloop
 
-This will create an ALSA loopback interface. You have to make the appropriate settings in `pavucontrol`:
+This will create an ALSA loopback interface. You also have to make the appropriate changes in `pavucontrol`:
 
 ![pavucontrol](/images/pavucontrol-loop.png?raw=true)
