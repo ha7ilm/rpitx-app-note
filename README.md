@@ -229,3 +229,11 @@ Run `pavucontrol` and set the recording source of `arecord` to "Monitor of" your
 On the PC, run `fldigi`, and start to transmit:
 
 ![fldigi](/images/fldigi.png?raw=true)
+
+If you don't want to listen to the transmitted signal on your PC:
+
+    sudo modprobe snd-aloop
+
+This will create an ALSA loopback interface. You have to make the appropriate settings in `pavucontrol`:
+
+![pavucontrol](/images/pavucontrol-loop.png?raw=true)
